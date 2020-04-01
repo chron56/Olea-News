@@ -41,13 +41,13 @@ export default {
     var qEn="(olive AND oil)";
     var key="6c13096cfaaa4deba63de944f99549f8";
     axios
-      .get('http://newsapi.org/v2/everything?qInTitle='+qGr+'&pageSize=100&sortBy=publishedAt&apiKey='+key)
+      .get('https://newsapi.org/v2/everything?qInTitle='+qGr+'&pageSize=100&sortBy=publishedAt&apiKey='+key)
       .then(res => {
         this.articlesGr = res.data.articles;
         this.articles=this.articlesGr;     
       });
     axios
-      .get('http://newsapi.org/v2/everything?qInTitle='+qEn+'&language=en&pageSize=100&sortBy=publishedAt&apiKey='+key)
+      .get('https://newsapi.org/v2/everything?qInTitle='+qEn+'&language=en&pageSize=100&sortBy=publishedAt&apiKey='+key)
       .then(res => {
         this.articlesEn = res.data.articles;
       });     
